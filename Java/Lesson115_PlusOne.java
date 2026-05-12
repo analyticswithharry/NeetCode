@@ -1,6 +1,6 @@
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
 // Lesson     : 115 -- Plus One
@@ -8,27 +8,12 @@
 // Difficulty : Easy
 // Study Plan : Day 58
 // =============================================================
-
-// -- Problem --------------------------------------------------
-// Title      : Plus One
-// Category   : Math and Geometry
-// Difficulty : Easy
 //
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
-
-public class Lesson115_PlusOne {
-
-    // TODO: implement solution for "Plus One"
-    public void solve() {
-        // implement here
-    }
-
-    public static void main(String[] args) {
-        Lesson115_PlusOne sol = new Lesson115_PlusOne();
-        System.out.println("Lesson 115: Plus One");
-    }
+// QUESTION:
+//   Given a non-empty array of decimal digits representing a non-negative integer, add one and return the resulting array.
+// =============================================================
+import java.util.*;
+public class Lesson115_PlusOne{
+  static int[] plusOne(int[]d){d=d.clone();for(int i=d.length-1;i>=0;i--){if(d[i]<9){d[i]++;return d;}d[i]=0;}int[] r=new int[d.length+1];r[0]=1;return r;}
+  public static void main(String[]x){System.out.println(Arrays.toString(plusOne(new int[]{1,2,3})));System.out.println(Arrays.toString(plusOne(new int[]{9,9})));}
 }

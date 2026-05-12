@@ -1,6 +1,6 @@
 # =============================================================
 # MIT License | @analyticswithharry2026
-# GitHub  : https://github.com/analyticswithharry2026
+# GitHub  : https://github.com/analyticswithharry
 # YouTube : Analytics with Harry
 # =============================================================
 # Lesson     : 117 -- Meeting Rooms II
@@ -8,24 +8,18 @@
 # Difficulty : Medium
 # Study Plan : Day 59
 # =============================================================
-
-# -- Problem --------------------------------------------------
-# Title      : Meeting Rooms II
-# Category   : Intervals
-# Difficulty : Medium
 #
-# APPROACH:
-#   Study the problem, then implement below.
-#
-# COMPLEXITY: Time O(?) | Space O(?)
-# --------------------------------------------------------------
+# QUESTION:
+#   Given an array of meeting time intervals, return the minimum number of conference rooms required.
+# =============================================================
+import heapq
+def minRooms(it):
+    it.sort(key=lambda x:x[0]); h=[]
+    for s,e in it:
+        if h and h[0]<=s: heapq.heappop(h)
+        heapq.heappush(h,e)
+    return len(h)
 
-class Solution:
-    def solve(self):
-        # TODO: implement solution for "Meeting Rooms II"
-        pass
-
-
-if __name__ == "__main__":
-    sol = Solution()
-    print("Lesson 117: Meeting Rooms II")
+if __name__=="__main__":
+    print(minRooms([[0,30],[5,10],[15,20]]))
+    print(minRooms([[7,10],[2,4]]))

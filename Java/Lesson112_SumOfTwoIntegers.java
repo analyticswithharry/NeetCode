@@ -1,6 +1,6 @@
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
 // Lesson     : 112 -- Sum of Two Integers
@@ -8,27 +8,11 @@
 // Difficulty : Medium
 // Study Plan : Day 56
 // =============================================================
-
-// -- Problem --------------------------------------------------
-// Title      : Sum of Two Integers
-// Category   : Bit Manipulation
-// Difficulty : Medium
 //
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
-
-public class Lesson112_SumOfTwoIntegers {
-
-    // TODO: implement solution for "Sum of Two Integers"
-    public void solve() {
-        // implement here
-    }
-
-    public static void main(String[] args) {
-        Lesson112_SumOfTwoIntegers sol = new Lesson112_SumOfTwoIntegers();
-        System.out.println("Lesson 112: Sum of Two Integers");
-    }
+// QUESTION:
+//   Given two integers a and b, return the sum without using + or -.
+// =============================================================
+public class Lesson112_SumOfTwoIntegers{
+  static int add(int a,int b){while(b!=0){int c=(a&b)<<1;a=a^b;b=c;}return a;}
+  public static void main(String[]x){System.out.println(add(1,2));System.out.println(add(-2,3));}
 }

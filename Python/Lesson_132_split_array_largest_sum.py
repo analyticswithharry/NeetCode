@@ -1,6 +1,6 @@
 # =============================================================
 # MIT License | @analyticswithharry2026
-# GitHub  : https://github.com/analyticswithharry2026
+# GitHub  : https://github.com/analyticswithharry
 # YouTube : Analytics with Harry
 # =============================================================
 # Lesson     : 132 -- Split Array Largest Sum
@@ -8,24 +8,23 @@
 # Difficulty : Hard
 # Study Plan : Day 66
 # =============================================================
-
-# -- Problem --------------------------------------------------
-# Title      : Split Array Largest Sum
-# Category   : Binary Search
-# Difficulty : Hard
 #
-# APPROACH:
-#   Study the problem, then implement below.
-#
-# COMPLEXITY: Time O(?) | Space O(?)
-# --------------------------------------------------------------
+# QUESTION:
+#   Split nums into k non-empty contiguous parts to minimize the largest sum among parts.
+# =============================================================
+def split(a,k):
+    def can(mx):
+        c,s=1,0
+        for x in a:
+            if s+x>mx: c+=1; s=x
+            else: s+=x
+        return c<=k
+    lo,hi=max(a),sum(a)
+    while lo<hi:
+        m=(lo+hi)//2
+        if can(m): hi=m
+        else: lo=m+1
+    return lo
 
-class Solution:
-    def solve(self):
-        # TODO: implement solution for "Split Array Largest Sum"
-        pass
-
-
-if __name__ == "__main__":
-    sol = Solution()
-    print("Lesson 132: Split Array Largest Sum")
+if __name__=="__main__":
+    print(split([7,2,5,10,8],2))

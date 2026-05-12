@@ -1,6 +1,6 @@
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
 // Lesson     : 117 -- Meeting Rooms II
@@ -8,27 +8,12 @@
 // Difficulty : Medium
 // Study Plan : Day 59
 // =============================================================
-
-// -- Problem --------------------------------------------------
-// Title      : Meeting Rooms II
-// Category   : Intervals
-// Difficulty : Medium
 //
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
-
-public class Lesson117_MeetingRoomsIi {
-
-    // TODO: implement solution for "Meeting Rooms II"
-    public void solve() {
-        // implement here
-    }
-
-    public static void main(String[] args) {
-        Lesson117_MeetingRoomsIi sol = new Lesson117_MeetingRoomsIi();
-        System.out.println("Lesson 117: Meeting Rooms II");
-    }
+// QUESTION:
+//   Given an array of meeting time intervals, return the minimum number of conference rooms required.
+// =============================================================
+import java.util.*;
+public class Lesson117_MeetingRoomsIi{
+  static int minRooms(int[][]it){Arrays.sort(it,(a,b)->a[0]-b[0]);PriorityQueue<Integer> h=new PriorityQueue<>();for(int[] x:it){if(!h.isEmpty()&&h.peek()<=x[0])h.poll();h.add(x[1]);}return h.size();}
+  public static void main(String[]x){System.out.println(minRooms(new int[][]{{0,30},{5,10},{15,20}}));System.out.println(minRooms(new int[][]{{7,10},{2,4}}));}
 }

@@ -1,6 +1,6 @@
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
 // Lesson     : 121 -- Generate Parentheses
@@ -8,21 +8,9 @@
 // Difficulty : Medium
 // Study Plan : Day 61
 // =============================================================
-
-// -- Problem --------------------------------------------------
-// Title      : Generate Parentheses
-// Category   : Stack
-// Difficulty : Medium
 //
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
-
-function solve() {
-    // TODO: implement solution for "Generate Parentheses"
-}
-
-// -- Tests ----------------------------------------------------
-console.log("Lesson 121: Generate Parentheses");
+// QUESTION:
+//   Given n pairs of parentheses, generate all combinations of well-formed parentheses.
+// =============================================================
+function gen(n){const res=[];function rec(s,o,c){if(s.length===2*n){res.push(s);return;}if(o<n)rec(s+"(",o+1,c);if(c<o)rec(s+")",o,c+1);}rec("",0,0);return res;}
+console.log(gen(3));

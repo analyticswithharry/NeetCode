@@ -1,6 +1,6 @@
 # =============================================================
 # MIT License | @analyticswithharry2026
-# GitHub  : https://github.com/analyticswithharry2026
+# GitHub  : https://github.com/analyticswithharry
 # YouTube : Analytics with Harry
 # =============================================================
 # Lesson     : 124 -- Top K Frequent Elements
@@ -8,24 +8,13 @@
 # Difficulty : Medium
 # Study Plan : Day 62
 # =============================================================
-
-# -- Problem --------------------------------------------------
-# Title      : Top K Frequent Elements
-# Category   : Arrays and Hashing
-# Difficulty : Medium
 #
-# APPROACH:
-#   Study the problem, then implement below.
-#
-# COMPLEXITY: Time O(?) | Space O(?)
-# --------------------------------------------------------------
+# QUESTION:
+#   Given an integer array nums and integer k, return the k most frequent elements.
+# =============================================================
+from collections import Counter
+def topK(a,k):
+    return [x for x,_ in Counter(a).most_common(k)]
 
-class Solution:
-    def solve(self):
-        # TODO: implement solution for "Top K Frequent Elements"
-        pass
-
-
-if __name__ == "__main__":
-    sol = Solution()
-    print("Lesson 124: Top K Frequent Elements")
+if __name__=="__main__":
+    print(topK([1,1,1,2,2,3],2))

@@ -1,6 +1,6 @@
 # =============================================================
 # MIT License | @analyticswithharry2026
-# GitHub  : https://github.com/analyticswithharry2026
+# GitHub  : https://github.com/analyticswithharry
 # YouTube : Analytics with Harry
 # =============================================================
 # Lesson     : 112 -- Sum of Two Integers
@@ -8,24 +8,17 @@
 # Difficulty : Medium
 # Study Plan : Day 56
 # =============================================================
-
-# -- Problem --------------------------------------------------
-# Title      : Sum of Two Integers
-# Category   : Bit Manipulation
-# Difficulty : Medium
 #
-# APPROACH:
-#   Study the problem, then implement below.
-#
-# COMPLEXITY: Time O(?) | Space O(?)
-# --------------------------------------------------------------
+# QUESTION:
+#   Given two integers a and b, return the sum without using + or -.
+# =============================================================
+def add(a,b):
+    M=0xFFFFFFFF
+    while b & M:
+        c=((a & b) << 1) & M
+        a=(a ^ b) & M
+        b=c
+    return a if a<=0x7FFFFFFF else ~(a^M)
 
-class Solution:
-    def solve(self):
-        # TODO: implement solution for "Sum of Two Integers"
-        pass
-
-
-if __name__ == "__main__":
-    sol = Solution()
-    print("Lesson 112: Sum of Two Integers")
+if __name__=="__main__":
+    print(add(1,2)); print(add(-2,3))

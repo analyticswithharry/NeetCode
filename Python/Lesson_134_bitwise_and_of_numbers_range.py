@@ -1,6 +1,6 @@
 # =============================================================
 # MIT License | @analyticswithharry2026
-# GitHub  : https://github.com/analyticswithharry2026
+# GitHub  : https://github.com/analyticswithharry
 # YouTube : Analytics with Harry
 # =============================================================
 # Lesson     : 134 -- Bitwise AND of Numbers Range
@@ -8,24 +8,14 @@
 # Difficulty : Medium
 # Study Plan : Day 67
 # =============================================================
-
-# -- Problem --------------------------------------------------
-# Title      : Bitwise AND of Numbers Range
-# Category   : Bit Manipulation
-# Difficulty : Medium
 #
-# APPROACH:
-#   Study the problem, then implement below.
-#
-# COMPLEXITY: Time O(?) | Space O(?)
-# --------------------------------------------------------------
+# QUESTION:
+#   Given range [m,n], return the bitwise AND of all numbers in this range, inclusive.
+# =============================================================
+def rangeAnd(m,n):
+    s=0
+    while m!=n: m>>=1; n>>=1; s+=1
+    return m<<s
 
-class Solution:
-    def solve(self):
-        # TODO: implement solution for "Bitwise AND of Numbers Range"
-        pass
-
-
-if __name__ == "__main__":
-    sol = Solution()
-    print("Lesson 134: Bitwise AND of Numbers Range")
+if __name__=="__main__":
+    print(rangeAnd(5,7)); print(rangeAnd(0,0))

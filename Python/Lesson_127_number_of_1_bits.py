@@ -1,6 +1,6 @@
 # =============================================================
 # MIT License | @analyticswithharry2026
-# GitHub  : https://github.com/analyticswithharry2026
+# GitHub  : https://github.com/analyticswithharry
 # YouTube : Analytics with Harry
 # =============================================================
 # Lesson     : 127 -- Number of 1 Bits
@@ -8,24 +8,14 @@
 # Difficulty : Easy
 # Study Plan : Day 64
 # =============================================================
-
-# -- Problem --------------------------------------------------
-# Title      : Number of 1 Bits
-# Category   : Bit Manipulation
-# Difficulty : Easy
 #
-# APPROACH:
-#   Study the problem, then implement below.
-#
-# COMPLEXITY: Time O(?) | Space O(?)
-# --------------------------------------------------------------
+# QUESTION:
+#   Return the number of 1 bits in unsigned int.
+# =============================================================
+def hw(n):
+    c=0
+    while n: n&=n-1; c+=1
+    return c
 
-class Solution:
-    def solve(self):
-        # TODO: implement solution for "Number of 1 Bits"
-        pass
-
-
-if __name__ == "__main__":
-    sol = Solution()
-    print("Lesson 127: Number of 1 Bits")
+if __name__=="__main__":
+    print(hw(11)); print(hw(128))

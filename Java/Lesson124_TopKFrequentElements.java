@@ -1,6 +1,6 @@
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
 // Lesson     : 124 -- Top K Frequent Elements
@@ -8,27 +8,12 @@
 // Difficulty : Medium
 // Study Plan : Day 62
 // =============================================================
-
-// -- Problem --------------------------------------------------
-// Title      : Top K Frequent Elements
-// Category   : Arrays and Hashing
-// Difficulty : Medium
 //
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
-
-public class Lesson124_TopKFrequentElements {
-
-    // TODO: implement solution for "Top K Frequent Elements"
-    public void solve() {
-        // implement here
-    }
-
-    public static void main(String[] args) {
-        Lesson124_TopKFrequentElements sol = new Lesson124_TopKFrequentElements();
-        System.out.println("Lesson 124: Top K Frequent Elements");
-    }
+// QUESTION:
+//   Given an integer array nums and integer k, return the k most frequent elements.
+// =============================================================
+import java.util.*;
+public class Lesson124_TopKFrequentElements{
+  static int[] topK(int[]a,int k){Map<Integer,Integer> m=new HashMap<>();for(int x:a)m.merge(x,1,Integer::sum);List<Map.Entry<Integer,Integer>> e=new ArrayList<>(m.entrySet());e.sort((p,q)->q.getValue()-p.getValue());int[] r=new int[k];for(int i=0;i<k;i++)r[i]=e.get(i).getKey();return r;}
+  public static void main(String[]x){System.out.println(Arrays.toString(topK(new int[]{1,1,1,2,2,3},2)));}
 }

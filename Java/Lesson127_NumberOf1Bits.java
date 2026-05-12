@@ -1,6 +1,6 @@
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
 // Lesson     : 127 -- Number of 1 Bits
@@ -8,27 +8,11 @@
 // Difficulty : Easy
 // Study Plan : Day 64
 // =============================================================
-
-// -- Problem --------------------------------------------------
-// Title      : Number of 1 Bits
-// Category   : Bit Manipulation
-// Difficulty : Easy
 //
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
-
-public class Lesson127_NumberOf1Bits {
-
-    // TODO: implement solution for "Number of 1 Bits"
-    public void solve() {
-        // implement here
-    }
-
-    public static void main(String[] args) {
-        Lesson127_NumberOf1Bits sol = new Lesson127_NumberOf1Bits();
-        System.out.println("Lesson 127: Number of 1 Bits");
-    }
+// QUESTION:
+//   Return the number of 1 bits in unsigned int.
+// =============================================================
+public class Lesson127_NumberOf1Bits{
+  static int hw(int n){int c=0;while(n!=0){n&=n-1;c++;}return c;}
+  public static void main(String[]x){System.out.println(hw(11));System.out.println(hw(128));}
 }

@@ -1,6 +1,6 @@
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
 // Lesson     : 133 -- Counting Bits
@@ -8,27 +8,12 @@
 // Difficulty : Easy
 // Study Plan : Day 67
 // =============================================================
-
-// -- Problem --------------------------------------------------
-// Title      : Counting Bits
-// Category   : Bit Manipulation
-// Difficulty : Easy
 //
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
-
-public class Lesson133_CountingBits {
-
-    // TODO: implement solution for "Counting Bits"
-    public void solve() {
-        // implement here
-    }
-
-    public static void main(String[] args) {
-        Lesson133_CountingBits sol = new Lesson133_CountingBits();
-        System.out.println("Lesson 133: Counting Bits");
-    }
+// QUESTION:
+//   For 0..n return array where ans[i] = number of 1-bits in i.
+// =============================================================
+import java.util.*;
+public class Lesson133_CountingBits{
+  static int[] cb(int n){int[] a=new int[n+1];for(int i=1;i<=n;i++)a[i]=a[i>>1]+(i&1);return a;}
+  public static void main(String[]x){System.out.println(Arrays.toString(cb(5)));}
 }

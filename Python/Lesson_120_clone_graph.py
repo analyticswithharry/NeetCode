@@ -1,6 +1,6 @@
 # =============================================================
 # MIT License | @analyticswithharry2026
-# GitHub  : https://github.com/analyticswithharry2026
+# GitHub  : https://github.com/analyticswithharry
 # YouTube : Analytics with Harry
 # =============================================================
 # Lesson     : 120 -- Clone Graph
@@ -8,24 +8,23 @@
 # Difficulty : Medium
 # Study Plan : Day 60
 # =============================================================
-
-# -- Problem --------------------------------------------------
-# Title      : Clone Graph
-# Category   : Graphs
-# Difficulty : Medium
 #
-# APPROACH:
-#   Study the problem, then implement below.
-#
-# COMPLEXITY: Time O(?) | Space O(?)
-# --------------------------------------------------------------
+# QUESTION:
+#   Given a node in a connected undirected graph, return a deep copy of the graph.
+# =============================================================
+class Node:
+    def __init__(self,v,nei=None): self.val=v; self.neighbors=nei or []
 
-class Solution:
-    def solve(self):
-        # TODO: implement solution for "Clone Graph"
-        pass
+def clone(n):
+    if not n: return None
+    seen={}
+    def dfs(x):
+        if x in seen: return seen[x]
+        c=Node(x.val); seen[x]=c
+        for y in x.neighbors: c.neighbors.append(dfs(y))
+        return c
+    return dfs(n)
 
-
-if __name__ == "__main__":
-    sol = Solution()
-    print("Lesson 120: Clone Graph")
+if __name__=="__main__":
+    a=Node(1); b=Node(2); a.neighbors=[b]; b.neighbors=[a]
+    c=clone(a); print(c.val, c.neighbors[0].val, c.neighbors[0].neighbors[0].val)

@@ -1,6 +1,6 @@
 # =============================================================
 # MIT License | @analyticswithharry2026
-# GitHub  : https://github.com/analyticswithharry2026
+# GitHub  : https://github.com/analyticswithharry
 # YouTube : Analytics with Harry
 # =============================================================
 # Lesson     : 111 -- Single Number
@@ -8,24 +8,15 @@
 # Difficulty : Easy
 # Study Plan : Day 56
 # =============================================================
-
-# -- Problem --------------------------------------------------
-# Title      : Single Number
-# Category   : Bit Manipulation
-# Difficulty : Easy
 #
-# APPROACH:
-#   Study the problem, then implement below.
-#
-# COMPLEXITY: Time O(?) | Space O(?)
-# --------------------------------------------------------------
-
-class Solution:
-    def solve(self):
-        # TODO: implement solution for "Single Number"
-        pass
-
+# QUESTION:
+#   Given a non-empty array of integers, every element appears twice except for one. Find that single one. O(1) extra space.
+# =============================================================
+def single(nums):
+    r = 0
+    for x in nums: r ^= x
+    return r
 
 if __name__ == "__main__":
-    sol = Solution()
-    print("Lesson 111: Single Number")
+    print(single([2,2,1]))
+    print(single([4,1,2,1,2]))

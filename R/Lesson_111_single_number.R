@@ -1,6 +1,6 @@
 # =============================================================
 # MIT License | @analyticswithharry2026
-# GitHub  : https://github.com/analyticswithharry2026
+# GitHub  : https://github.com/analyticswithharry
 # YouTube : Analytics with Harry
 # =============================================================
 # Lesson     : 111 -- Single Number
@@ -8,21 +8,9 @@
 # Difficulty : Easy
 # Study Plan : Day 56
 # =============================================================
-
-# -- Problem --------------------------------------------------
-# Title      : Single Number
-# Category   : Bit Manipulation
-# Difficulty : Easy
 #
-# APPROACH:
-#   Study the problem, then implement below.
-#
-# COMPLEXITY: Time O(?) | Space O(?)
-# --------------------------------------------------------------
-
-solve <- function() {
-  # TODO: implement solution for "Single Number"
-}
-
-# -- Tests ----------------------------------------------------
-cat("Lesson 111: Single Number\n")
+# QUESTION:
+#   Given a non-empty array of integers, every element appears twice except for one. Find that single one. O(1) extra space.
+# =============================================================
+single <- function(a) Reduce(bitwXor, a, 0)
+cat(single(c(2,2,1)),"\n"); cat(single(c(4,1,2,1,2)),"\n")

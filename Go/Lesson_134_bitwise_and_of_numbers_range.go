@@ -2,7 +2,7 @@
 
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
 // Lesson     : 134 -- Bitwise AND of Numbers Range
@@ -10,27 +10,11 @@
 // Difficulty : Medium
 // Study Plan : Day 67
 // =============================================================
-
+//
+// QUESTION:
+//   Given range [m,n], return the bitwise AND of all numbers in this range, inclusive.
+// =============================================================
 package main
-
 import "fmt"
-
-// -- Problem --------------------------------------------------
-// Title      : Bitwise AND of Numbers Range
-// Category   : Bit Manipulation
-// Difficulty : Medium
-//
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
-
-// TODO: implement solution for "Bitwise AND of Numbers Range"
-func solve() {
-    // implement here
-}
-
-func main() {
-    fmt.Println("Lesson 134: Bitwise AND of Numbers Range")
-}
+func rangeAnd(m,n int) int { s:=0; for m!=n { m>>=1; n>>=1; s++ }; return m<<s }
+func main(){ fmt.Println(rangeAnd(5,7)); fmt.Println(rangeAnd(0,0)) }

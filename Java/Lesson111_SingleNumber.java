@@ -1,6 +1,6 @@
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
 // Lesson     : 111 -- Single Number
@@ -8,27 +8,11 @@
 // Difficulty : Easy
 // Study Plan : Day 56
 // =============================================================
-
-// -- Problem --------------------------------------------------
-// Title      : Single Number
-// Category   : Bit Manipulation
-// Difficulty : Easy
 //
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
-
-public class Lesson111_SingleNumber {
-
-    // TODO: implement solution for "Single Number"
-    public void solve() {
-        // implement here
-    }
-
-    public static void main(String[] args) {
-        Lesson111_SingleNumber sol = new Lesson111_SingleNumber();
-        System.out.println("Lesson 111: Single Number");
-    }
+// QUESTION:
+//   Given a non-empty array of integers, every element appears twice except for one. Find that single one. O(1) extra space.
+// =============================================================
+public class Lesson111_SingleNumber{
+  static int single(int[] a){int r=0;for(int x:a)r^=x;return r;}
+  public static void main(String[] a){System.out.println(single(new int[]{2,2,1}));System.out.println(single(new int[]{4,1,2,1,2}));}
 }
