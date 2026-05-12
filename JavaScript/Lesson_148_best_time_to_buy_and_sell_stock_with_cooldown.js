@@ -1,6 +1,6 @@
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
 // Lesson     : 148 -- Best Time to Buy And Sell Stock With Cooldown
@@ -8,21 +8,9 @@
 // Difficulty : Medium
 // Study Plan : Day 74
 // =============================================================
-
-// -- Problem --------------------------------------------------
-// Title      : Best Time to Buy And Sell Stock With Cooldown
-// Category   : 2-D Dynamic Programming
-// Difficulty : Medium
 //
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
-
-function solve() {
-    // TODO: implement solution for "Best Time to Buy And Sell Stock With Cooldown"
-}
-
-// -- Tests ----------------------------------------------------
-console.log("Lesson 148: Best Time to Buy And Sell Stock With Cooldown");
+// QUESTION:
+//   Stock prices; can do unlimited transactions but after selling must cooldown 1 day. Max profit.
+// =============================================================
+function maxP(p){let hold=-p[0],sold=0,rest=0;for(let i=1;i<p.length;i++){const h=Math.max(hold,rest-p[i]);const s=hold+p[i];const r=Math.max(rest,sold);hold=h;sold=s;rest=r;}return Math.max(sold,rest);}
+console.log(maxP([1,2,3,0,2]));

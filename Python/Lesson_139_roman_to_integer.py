@@ -1,6 +1,6 @@
 # =============================================================
 # MIT License | @analyticswithharry2026
-# GitHub  : https://github.com/analyticswithharry2026
+# GitHub  : https://github.com/analyticswithharry
 # YouTube : Analytics with Harry
 # =============================================================
 # Lesson     : 139 -- Roman to Integer
@@ -8,24 +8,17 @@
 # Difficulty : Easy
 # Study Plan : Day 70
 # =============================================================
-
-# -- Problem --------------------------------------------------
-# Title      : Roman to Integer
-# Category   : Math and Geometry
-# Difficulty : Easy
 #
-# APPROACH:
-#   Study the problem, then implement below.
-#
-# COMPLEXITY: Time O(?) | Space O(?)
-# --------------------------------------------------------------
+# QUESTION:
+#   Convert Roman numeral string to integer.
+# =============================================================
+def r2i(s):
+    m={'I':1,'V':5,'X':10,'L':50,'C':100,'D':500,'M':1000}; t=0; p=0
+    for c in reversed(s):
+        v=m[c]
+        if v<p: t-=v
+        else: t+=v; p=v
+    return t
 
-class Solution:
-    def solve(self):
-        # TODO: implement solution for "Roman to Integer"
-        pass
-
-
-if __name__ == "__main__":
-    sol = Solution()
-    print("Lesson 139: Roman to Integer")
+if __name__=="__main__":
+    print(r2i("III")); print(r2i("LVIII")); print(r2i("MCMXCIV"))

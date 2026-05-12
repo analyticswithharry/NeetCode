@@ -1,6 +1,6 @@
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
 // Lesson     : 150 -- Online Stock Span
@@ -8,27 +8,12 @@
 // Difficulty : Medium
 // Study Plan : Day 75
 // =============================================================
-
-// -- Problem --------------------------------------------------
-// Title      : Online Stock Span
-// Category   : Stack
-// Difficulty : Medium
 //
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
-
-public class Lesson150_OnlineStockSpan {
-
-    // TODO: implement solution for "Online Stock Span"
-    public void solve() {
-        // implement here
-    }
-
-    public static void main(String[] args) {
-        Lesson150_OnlineStockSpan sol = new Lesson150_OnlineStockSpan();
-        System.out.println("Lesson 150: Online Stock Span");
-    }
+// QUESTION:
+//   Implement StockSpanner.next(price): consecutive days <= today's price (including today).
+// =============================================================
+import java.util.*;
+public class Lesson150_OnlineStockSpan{
+  static class StockSpanner{Deque<int[]> st=new ArrayDeque<>();int next(int p){int s=1;while(!st.isEmpty()&&st.peek()[0]<=p)s+=st.pop()[1];st.push(new int[]{p,s});return s;}}
+  public static void main(String[]x){StockSpanner s=new StockSpanner();int[] arr={100,80,60,70,60,75,85};StringBuilder sb=new StringBuilder("[");for(int v:arr){sb.append(s.next(v)).append(" ");}sb.append("]");System.out.println(sb);}
 }

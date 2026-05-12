@@ -1,6 +1,6 @@
 # =============================================================
 # MIT License | @analyticswithharry2026
-# GitHub  : https://github.com/analyticswithharry2026
+# GitHub  : https://github.com/analyticswithharry
 # YouTube : Analytics with Harry
 # =============================================================
 # Lesson     : 159 -- Find Median From Data Stream
@@ -8,24 +8,21 @@
 # Difficulty : Hard
 # Study Plan : Day 80
 # =============================================================
-
-# -- Problem --------------------------------------------------
-# Title      : Find Median From Data Stream
-# Category   : Heap Priority Queue
-# Difficulty : Hard
 #
-# APPROACH:
-#   Study the problem, then implement below.
-#
-# COMPLEXITY: Time O(?) | Space O(?)
-# --------------------------------------------------------------
+# QUESTION:
+#   Design MedianFinder: addNum, findMedian.
+# =============================================================
+import heapq
+class MedianFinder:
+    def __init__(self): self.lo=[]; self.hi=[]
+    def addNum(self,x):
+        heapq.heappush(self.lo,-x)
+        heapq.heappush(self.hi,-heapq.heappop(self.lo))
+        if len(self.hi)>len(self.lo): heapq.heappush(self.lo,-heapq.heappop(self.hi))
+    def findMedian(self):
+        if len(self.lo)>len(self.hi): return -self.lo[0]
+        return (-self.lo[0]+self.hi[0])/2
 
-class Solution:
-    def solve(self):
-        # TODO: implement solution for "Find Median From Data Stream"
-        pass
-
-
-if __name__ == "__main__":
-    sol = Solution()
-    print("Lesson 159: Find Median From Data Stream")
+if __name__=="__main__":
+    m=MedianFinder()
+    for x in [1,2,3]: m.addNum(x); print(m.findMedian())

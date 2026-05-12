@@ -1,6 +1,6 @@
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
 // Lesson     : 149 -- Daily Temperatures
@@ -8,27 +8,12 @@
 // Difficulty : Medium
 // Study Plan : Day 75
 // =============================================================
-
-// -- Problem --------------------------------------------------
-// Title      : Daily Temperatures
-// Category   : Stack
-// Difficulty : Medium
 //
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
-
-public class Lesson149_DailyTemperatures {
-
-    // TODO: implement solution for "Daily Temperatures"
-    public void solve() {
-        // implement here
-    }
-
-    public static void main(String[] args) {
-        Lesson149_DailyTemperatures sol = new Lesson149_DailyTemperatures();
-        System.out.println("Lesson 149: Daily Temperatures");
-    }
+// QUESTION:
+//   For each day, return number of days until a warmer temperature, or 0.
+// =============================================================
+import java.util.*;
+public class Lesson149_DailyTemperatures{
+  static int[] dailyT(int[]t){int[] r=new int[t.length];Deque<Integer> st=new ArrayDeque<>();for(int i=0;i<t.length;i++){while(!st.isEmpty()&&t[st.peek()]<t[i]){int j=st.pop();r[j]=i-j;}st.push(i);}return r;}
+  public static void main(String[]x){System.out.println(Arrays.toString(dailyT(new int[]{73,74,75,71,69,72,76,73})));}
 }

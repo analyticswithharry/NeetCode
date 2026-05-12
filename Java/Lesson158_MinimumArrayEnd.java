@@ -1,6 +1,6 @@
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
 // Lesson     : 158 -- Minimum Array End
@@ -8,27 +8,11 @@
 // Difficulty : Medium
 // Study Plan : Day 79
 // =============================================================
-
-// -- Problem --------------------------------------------------
-// Title      : Minimum Array End
-// Category   : Bit Manipulation
-// Difficulty : Medium
 //
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
-
-public class Lesson158_MinimumArrayEnd {
-
-    // TODO: implement solution for "Minimum Array End"
-    public void solve() {
-        // implement here
-    }
-
-    public static void main(String[] args) {
-        Lesson158_MinimumArrayEnd sol = new Lesson158_MinimumArrayEnd();
-        System.out.println("Lesson 158: Minimum Array End");
-    }
+// QUESTION:
+//   Given n and x, return min possible value v such that AND of n distinct integers (>=x, <=v, all sharing bits of x) equals x. Equivalent: spread (n-1) over the zero-bits of x.
+// =============================================================
+public class Lesson158_MinimumArrayEnd{
+  static long minEnd(long n,long x){n--;long r=x,bit=1,nb=1;while(nb<=n){if((x&bit)==0){if((n&nb)!=0)r|=bit;nb<<=1;}bit<<=1;}return r;}
+  public static void main(String[]a){System.out.println(minEnd(3,4));System.out.println(minEnd(2,7));}
 }

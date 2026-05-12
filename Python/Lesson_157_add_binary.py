@@ -1,6 +1,6 @@
 # =============================================================
 # MIT License | @analyticswithharry2026
-# GitHub  : https://github.com/analyticswithharry2026
+# GitHub  : https://github.com/analyticswithharry
 # YouTube : Analytics with Harry
 # =============================================================
 # Lesson     : 157 -- Add Binary
@@ -8,24 +8,12 @@
 # Difficulty : Easy
 # Study Plan : Day 79
 # =============================================================
-
-# -- Problem --------------------------------------------------
-# Title      : Add Binary
-# Category   : Bit Manipulation
-# Difficulty : Easy
 #
-# APPROACH:
-#   Study the problem, then implement below.
-#
-# COMPLEXITY: Time O(?) | Space O(?)
-# --------------------------------------------------------------
+# QUESTION:
+#   Given two binary strings, return their sum as a binary string.
+# =============================================================
+def addBin(a,b):
+    return bin(int(a,2)+int(b,2))[2:]
 
-class Solution:
-    def solve(self):
-        # TODO: implement solution for "Add Binary"
-        pass
-
-
-if __name__ == "__main__":
-    sol = Solution()
-    print("Lesson 157: Add Binary")
+if __name__=="__main__":
+    print(addBin("11","1")); print(addBin("1010","1011"))

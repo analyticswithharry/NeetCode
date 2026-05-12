@@ -1,6 +1,6 @@
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
 // Lesson     : 136 -- Car Pooling
@@ -8,27 +8,11 @@
 // Difficulty : Medium
 // Study Plan : Day 68
 // =============================================================
-
-// -- Problem --------------------------------------------------
-// Title      : Car Pooling
-// Category   : Heap Priority Queue
-// Difficulty : Medium
 //
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
-
-public class Lesson136_CarPooling {
-
-    // TODO: implement solution for "Car Pooling"
-    public void solve() {
-        // implement here
-    }
-
-    public static void main(String[] args) {
-        Lesson136_CarPooling sol = new Lesson136_CarPooling();
-        System.out.println("Lesson 136: Car Pooling");
-    }
+// QUESTION:
+//   Trips [numPassengers,from,to]; capacity. Return true iff possible to pick up & drop off all passengers without exceeding capacity.
+// =============================================================
+public class Lesson136_CarPooling{
+  static boolean carPool(int[][]t,int cap){int[] e=new int[1001];for(int[] x:t){e[x[1]]+=x[0];e[x[2]]-=x[0];}int s=0;for(int v:e){s+=v;if(s>cap)return false;}return true;}
+  public static void main(String[]x){System.out.println(carPool(new int[][]{{2,1,5},{3,3,7}},4));System.out.println(carPool(new int[][]{{2,1,5},{3,3,7}},5));}
 }

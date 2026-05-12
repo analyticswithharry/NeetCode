@@ -1,6 +1,6 @@
 # =============================================================
 # MIT License | @analyticswithharry2026
-# GitHub  : https://github.com/analyticswithharry2026
+# GitHub  : https://github.com/analyticswithharry
 # YouTube : Analytics with Harry
 # =============================================================
 # Lesson     : 143 -- Palindromic Substrings
@@ -8,24 +8,16 @@
 # Difficulty : Medium
 # Study Plan : Day 72
 # =============================================================
-
-# -- Problem --------------------------------------------------
-# Title      : Palindromic Substrings
-# Category   : 1-D Dynamic Programming
-# Difficulty : Medium
 #
-# APPROACH:
-#   Study the problem, then implement below.
-#
-# COMPLEXITY: Time O(?) | Space O(?)
-# --------------------------------------------------------------
+# QUESTION:
+#   Count number of palindromic substrings in s.
+# =============================================================
+def count(s):
+    c=0
+    for i in range(len(s)):
+        for a,b in [(i,i),(i,i+1)]:
+            while a>=0 and b<len(s) and s[a]==s[b]: c+=1; a-=1; b+=1
+    return c
 
-class Solution:
-    def solve(self):
-        # TODO: implement solution for "Palindromic Substrings"
-        pass
-
-
-if __name__ == "__main__":
-    sol = Solution()
-    print("Lesson 143: Palindromic Substrings")
+if __name__=="__main__":
+    print(count("abc")); print(count("aaa"))

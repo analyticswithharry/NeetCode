@@ -1,6 +1,6 @@
 # =============================================================
 # MIT License | @analyticswithharry2026
-# GitHub  : https://github.com/analyticswithharry2026
+# GitHub  : https://github.com/analyticswithharry
 # YouTube : Analytics with Harry
 # =============================================================
 # Lesson     : 149 -- Daily Temperatures
@@ -8,24 +8,17 @@
 # Difficulty : Medium
 # Study Plan : Day 75
 # =============================================================
-
-# -- Problem --------------------------------------------------
-# Title      : Daily Temperatures
-# Category   : Stack
-# Difficulty : Medium
 #
-# APPROACH:
-#   Study the problem, then implement below.
-#
-# COMPLEXITY: Time O(?) | Space O(?)
-# --------------------------------------------------------------
+# QUESTION:
+#   For each day, return number of days until a warmer temperature, or 0.
+# =============================================================
+def dailyT(t):
+    res=[0]*len(t); st=[]
+    for i,x in enumerate(t):
+        while st and t[st[-1]]<x:
+            j=st.pop(); res[j]=i-j
+        st.append(i)
+    return res
 
-class Solution:
-    def solve(self):
-        # TODO: implement solution for "Daily Temperatures"
-        pass
-
-
-if __name__ == "__main__":
-    sol = Solution()
-    print("Lesson 149: Daily Temperatures")
+if __name__=="__main__":
+    print(dailyT([73,74,75,71,69,72,76,73]))

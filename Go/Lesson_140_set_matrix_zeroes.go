@@ -2,7 +2,7 @@
 
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
 // Lesson     : 140 -- Set Matrix Zeroes
@@ -10,27 +10,11 @@
 // Difficulty : Medium
 // Study Plan : Day 70
 // =============================================================
-
+//
+// QUESTION:
+//   Given m x n matrix, if an element is 0, set its entire row and column to 0. In place.
+// =============================================================
 package main
-
 import "fmt"
-
-// -- Problem --------------------------------------------------
-// Title      : Set Matrix Zeroes
-// Category   : Math and Geometry
-// Difficulty : Medium
-//
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
-
-// TODO: implement solution for "Set Matrix Zeroes"
-func solve() {
-    // implement here
-}
-
-func main() {
-    fmt.Println("Lesson 140: Set Matrix Zeroes")
-}
+func setZero(g [][]int) [][]int { m,n:=len(g),len(g[0]); r0,c0:=false,false; for j:=0;j<n;j++ { if g[0][j]==0 { r0=true } }; for i:=0;i<m;i++ { if g[i][0]==0 { c0=true } }; for i:=1;i<m;i++ { for j:=1;j<n;j++ { if g[i][j]==0 { g[i][0]=0; g[0][j]=0 } } }; for i:=1;i<m;i++ { for j:=1;j<n;j++ { if g[i][0]==0 || g[0][j]==0 { g[i][j]=0 } } }; if r0 { for j:=0;j<n;j++ { g[0][j]=0 } }; if c0 { for i:=0;i<m;i++ { g[i][0]=0 } }; return g }
+func main(){ fmt.Println(setZero([][]int{{1,1,1},{1,0,1},{1,1,1}})) }
