@@ -1,6 +1,6 @@
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
 // Lesson     : 001 -- Reverse String
@@ -8,31 +8,36 @@
 // Difficulty : Easy
 // Study Plan : Day 1
 // =============================================================
+//
+// QUESTION:
+//   Write a function that reverses a string. The input string is given as
+//   an array of characters s. You must do this by modifying the input array
+//   in-place with O(1) extra memory.
+//
+//   Example:
+//     Input : s = ['h','e','l','l','o']
+//     Output: ['o','l','l','e','h']
+// =============================================================
 
-#include <bits/stdc++.h>
+#include <vector>
+#include <string>
+#include <iostream>
+#include <stack>
+#include <queue>
+#include <algorithm>
 using namespace std;
-
-// -- Problem --------------------------------------------------
-// Title      : Reverse String
-// Category   : Two Pointers
-// Difficulty : Easy
-//
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
 
 class Solution {
 public:
-    // TODO: implement solution for "Reverse String"
-    void solve() {
-        // implement here
+    void reverseString(vector<char>& s) {
+        int l = 0, r = (int)s.size() - 1;
+        while (l < r) swap(s[l++], s[r--]);
     }
 };
 
 int main() {
-    Solution sol;
-    cout << "Lesson 001: Reverse String" << endl;
-    return 0;
+    vector<char> s = {'h','e','l','l','o'};
+    Solution().reverseString(s);
+    for (char c : s) cout << c;
+    cout << endl;
 }

@@ -9,7 +9,12 @@
 // Study Plan : Day 111
 // =============================================================
 
-#include <bits/stdc++.h>
+#include <vector>
+#include <string>
+#include <iostream>
+#include <stack>
+#include <queue>
+#include <algorithm>
 using namespace std;
 
 // -- Problem --------------------------------------------------

@@ -1,6 +1,6 @@
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
 // Lesson     : 006 -- Binary Tree Preorder Traversal
@@ -8,31 +8,42 @@
 // Difficulty : Easy
 // Study Plan : Day 3
 // =============================================================
+//
+// QUESTION:
+//   Given the root of a binary tree, return the preorder (Root, Left, Right)
+//   traversal of its nodes' values.
+//
+//   Example:
+//     Input : root = [1,null,2,3]
+//     Output: [1, 2, 3]
+// =============================================================
 
-#include <bits/stdc++.h>
+#include <vector>
+#include <string>
+#include <iostream>
+#include <stack>
+#include <queue>
+#include <algorithm>
 using namespace std;
 
-// -- Problem --------------------------------------------------
-// Title      : Binary Tree Preorder Traversal
-// Category   : Trees
-// Difficulty : Easy
-//
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
+struct TreeNode { int val; TreeNode *left, *right; TreeNode(int v):val(v),left(nullptr),right(nullptr){} };
 
 class Solution {
 public:
-    // TODO: implement solution for "Binary Tree Preorder Traversal"
-    void solve() {
-        // implement here
+    vector<int> preorderTraversal(TreeNode* root) {
+        vector<int> out; if (!root) return out;
+        stack<TreeNode*> st; st.push(root);
+        while (!st.empty()) {
+            auto* n = st.top(); st.pop(); out.push_back(n->val);
+            if (n->right) st.push(n->right);
+            if (n->left)  st.push(n->left);
+        }
+        return out;
     }
 };
 
 int main() {
-    Solution sol;
-    cout << "Lesson 006: Binary Tree Preorder Traversal" << endl;
-    return 0;
+    auto* r = new TreeNode(1); r->right = new TreeNode(2); r->right->left = new TreeNode(3);
+    for (int v : Solution().preorderTraversal(r)) cout << v << " ";
+    cout << endl;
 }

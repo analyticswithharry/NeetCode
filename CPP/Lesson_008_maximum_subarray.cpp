@@ -1,6 +1,6 @@
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
 // Lesson     : 008 -- Maximum Subarray
@@ -8,31 +8,37 @@
 // Difficulty : Medium
 // Study Plan : Day 4
 // =============================================================
+//
+// QUESTION:
+//   Given an integer array nums, find the contiguous subarray (containing
+//   at least one number) which has the largest sum and return its sum.
+//
+//   Example:
+//     Input : nums = [-2,1,-3,4,-1,2,1,-5,4]
+//     Output: 6   (subarray [4,-1,2,1])
+// =============================================================
 
-#include <bits/stdc++.h>
+#include <vector>
+#include <string>
+#include <iostream>
+#include <stack>
+#include <queue>
+#include <algorithm>
 using namespace std;
-
-// -- Problem --------------------------------------------------
-// Title      : Maximum Subarray
-// Category   : Greedy
-// Difficulty : Medium
-//
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
 
 class Solution {
 public:
-    // TODO: implement solution for "Maximum Subarray"
-    void solve() {
-        // implement here
+    int maxSubArray(vector<int>& nums) {
+        int best = nums[0], cur = nums[0];
+        for (int i = 1; i < (int)nums.size(); ++i) {
+            cur = max(nums[i], cur + nums[i]);
+            best = max(best, cur);
+        }
+        return best;
     }
 };
 
 int main() {
-    Solution sol;
-    cout << "Lesson 008: Maximum Subarray" << endl;
-    return 0;
+    vector<int> v = {-2,1,-3,4,-1,2,1,-5,4};
+    cout << Solution().maxSubArray(v) << endl;
 }

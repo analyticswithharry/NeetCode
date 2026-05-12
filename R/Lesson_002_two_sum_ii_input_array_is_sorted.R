@@ -1,6 +1,6 @@
 # =============================================================
 # MIT License | @analyticswithharry2026
-# GitHub  : https://github.com/analyticswithharry2026
+# GitHub  : https://github.com/analyticswithharry
 # YouTube : Analytics with Harry
 # =============================================================
 # Lesson     : 002 -- Two Sum II Input Array Is Sorted
@@ -8,21 +8,25 @@
 # Difficulty : Medium
 # Study Plan : Day 1
 # =============================================================
-
-# -- Problem --------------------------------------------------
-# Title      : Two Sum II Input Array Is Sorted
-# Category   : Two Pointers
-# Difficulty : Medium
 #
-# APPROACH:
-#   Study the problem, then implement below.
+# QUESTION:
+#   Given a 1-indexed sorted array of integers `numbers`, find two numbers
+#   such that they add up to a specific `target`. Return their 1-based
+#   indices as [index1, index2]. Use O(1) extra space.
 #
-# COMPLEXITY: Time O(?) | Space O(?)
-# --------------------------------------------------------------
+#   Example:
+#     Input : numbers = [2,7,11,15], target = 9
+#     Output: [1,2]   (because 2 + 7 = 9)
+# =============================================================
 
-solve <- function() {
-  # TODO: implement solution for "Two Sum II Input Array Is Sorted"
+twoSum <- function(numbers, target) {
+    l <- 1; r <- length(numbers)
+    while (l < r) {
+        s <- numbers[l] + numbers[r]
+        if (s == target) return(c(l, r))
+        if (s < target) l <- l + 1 else r <- r - 1
+    }
+    integer(0)
 }
 
-# -- Tests ----------------------------------------------------
-cat("Lesson 002: Two Sum II Input Array Is Sorted\n")
+print(twoSum(c(2,7,11,15), 9))  # 1 2

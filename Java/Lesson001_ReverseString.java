@@ -1,6 +1,6 @@
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
 // Lesson     : 001 -- Reverse String
@@ -8,27 +8,27 @@
 // Difficulty : Easy
 // Study Plan : Day 1
 // =============================================================
+//
+// QUESTION:
+//   Write a function that reverses a string. The input string is given as
+//   an array of characters s. You must do this by modifying the input array
+//   in-place with O(1) extra memory.
+//
+//   Example:
+//     Input : s = ['h','e','l','l','o']
+//     Output: ['o','l','l','e','h']
+// =============================================================
 
-// -- Problem --------------------------------------------------
-// Title      : Reverse String
-// Category   : Two Pointers
-// Difficulty : Easy
-//
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
+import java.util.Arrays;
 
 public class Lesson001_ReverseString {
-
-    // TODO: implement solution for "Reverse String"
-    public void solve() {
-        // implement here
+    public void reverseString(char[] s) {
+        int l = 0, r = s.length - 1;
+        while (l < r) { char t = s[l]; s[l++] = s[r]; s[r--] = t; }
     }
-
     public static void main(String[] args) {
-        Lesson001_ReverseString sol = new Lesson001_ReverseString();
-        System.out.println("Lesson 001: Reverse String");
+        char[] s = {'h','e','l','l','o'};
+        new Lesson001_ReverseString().reverseString(s);
+        System.out.println(Arrays.toString(s));
     }
 }

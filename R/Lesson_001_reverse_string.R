@@ -1,6 +1,6 @@
 # =============================================================
 # MIT License | @analyticswithharry2026
-# GitHub  : https://github.com/analyticswithharry2026
+# GitHub  : https://github.com/analyticswithharry
 # YouTube : Analytics with Harry
 # =============================================================
 # Lesson     : 001 -- Reverse String
@@ -8,21 +8,20 @@
 # Difficulty : Easy
 # Study Plan : Day 1
 # =============================================================
-
-# -- Problem --------------------------------------------------
-# Title      : Reverse String
-# Category   : Two Pointers
-# Difficulty : Easy
 #
-# APPROACH:
-#   Study the problem, then implement below.
+# QUESTION:
+#   Write a function that reverses a string. The input string is given as
+#   an array of characters s. You must do this by modifying the input array
+#   in-place with O(1) extra memory.
 #
-# COMPLEXITY: Time O(?) | Space O(?)
-# --------------------------------------------------------------
+#   Example:
+#     Input : s = ['h','e','l','l','o']
+#     Output: ['o','l','l','e','h']
+# =============================================================
 
-solve <- function() {
-  # TODO: implement solution for "Reverse String"
+reverseString <- function(s) {
+    rev(s)
 }
 
-# -- Tests ----------------------------------------------------
-cat("Lesson 001: Reverse String\n")
+s <- c("h","e","l","l","o")
+print(reverseString(s))
