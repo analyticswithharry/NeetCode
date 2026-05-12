@@ -1,6 +1,6 @@
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
 // Lesson     : 229 -- Perfect Squares
@@ -8,21 +8,9 @@
 // Difficulty : Medium
 // Study Plan : Day 115
 // =============================================================
-
-// -- Problem --------------------------------------------------
-// Title      : Perfect Squares
-// Category   : 1-D Dynamic Programming
-// Difficulty : Medium
 //
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
-
-function solve() {
-    // TODO: implement solution for "Perfect Squares"
-}
-
-// -- Tests ----------------------------------------------------
-console.log("Lesson 229: Perfect Squares");
+// QUESTION:
+//   Min number of perfect-square numbers summing to n.
+// =============================================================
+function numSquares(n){const dp=Array(n+1).fill(Infinity);dp[0]=0;for(let i=1;i<=n;i++)for(let j=1;j*j<=i;j++)dp[i]=Math.min(dp[i],dp[i-j*j]+1);return dp[n];}
+console.log(numSquares(12));console.log(numSquares(13));

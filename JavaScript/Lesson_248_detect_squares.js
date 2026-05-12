@@ -1,6 +1,6 @@
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
 // Lesson     : 248 -- Detect Squares
@@ -8,21 +8,9 @@
 // Difficulty : Medium
 // Study Plan : Day 124
 // =============================================================
-
-// -- Problem --------------------------------------------------
-// Title      : Detect Squares
-// Category   : Math and Geometry
-// Difficulty : Medium
 //
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
-
-function solve() {
-    // TODO: implement solution for "Detect Squares"
-}
-
-// -- Tests ----------------------------------------------------
-console.log("Lesson 248: Detect Squares");
+// QUESTION:
+//   Add point or count axis-aligned squares with given query point.
+// =============================================================
+class DS{constructor(){this.c={};}_k(p){return p[0]+","+p[1];}add(p){const k=this._k(p);this.c[k]=(this.c[k]||0)+1;}count(p){const [x,y]=p;let tot=0;for(const k in this.c){const [a,b]=k.split(",").map(Number);if(a===x||Math.abs(a-x)!==Math.abs(b-y))continue;tot+=this.c[k]*(this.c[a+","+y]||0)*(this.c[x+","+b]||0);}return tot;}}
+const d=new DS();[[3,10],[11,2],[3,2]].forEach(p=>d.add(p));console.log(d.count([11,10]));

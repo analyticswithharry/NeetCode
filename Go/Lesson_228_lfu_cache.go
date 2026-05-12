@@ -2,7 +2,7 @@
 
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
 // Lesson     : 228 -- LFU Cache
@@ -10,27 +10,10 @@
 // Difficulty : Hard
 // Study Plan : Day 114
 // =============================================================
-
+//
+// QUESTION:
+//   LFU eviction; tie-break by least recently used. Use freq buckets of OrderedDict.
+// =============================================================
 package main
-
 import "fmt"
-
-// -- Problem --------------------------------------------------
-// Title      : LFU Cache
-// Category   : Linked List
-// Difficulty : Hard
-//
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
-
-// TODO: implement solution for "LFU Cache"
-func solve() {
-    // implement here
-}
-
-func main() {
-    fmt.Println("Lesson 228: LFU Cache")
-}
+func main(){ fmt.Println("LFU Cache: see Python/Java/C++ implementations") }

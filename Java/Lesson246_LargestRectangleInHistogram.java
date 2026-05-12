@@ -1,6 +1,6 @@
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
 // Lesson     : 246 -- Largest Rectangle In Histogram
@@ -8,27 +8,12 @@
 // Difficulty : Hard
 // Study Plan : Day 123
 // =============================================================
-
-// -- Problem --------------------------------------------------
-// Title      : Largest Rectangle In Histogram
-// Category   : Stack
-// Difficulty : Hard
 //
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
-
-public class Lesson246_LargestRectangleInHistogram {
-
-    // TODO: implement solution for "Largest Rectangle In Histogram"
-    public void solve() {
-        // implement here
-    }
-
-    public static void main(String[] args) {
-        Lesson246_LargestRectangleInHistogram sol = new Lesson246_LargestRectangleInHistogram();
-        System.out.println("Lesson 246: Largest Rectangle In Histogram");
-    }
+// QUESTION:
+//   Max rectangular area in histogram. Monotonic stack.
+// =============================================================
+import java.util.*;
+public class Lesson246_LargestRectangleInHistogram{
+  static int largestRect(int[] h){Deque<Integer> st=new ArrayDeque<>();int best=0;int[] h2=new int[h.length+1];System.arraycopy(h,0,h2,0,h.length);for(int i=0;i<h2.length;i++){while(!st.isEmpty()&&h2[st.peek()]>h2[i]){int top=st.pop();int w=st.isEmpty()?i:i-st.peek()-1;best=Math.max(best,h2[top]*w);}st.push(i);}return best;}
+  public static void main(String[]a){System.out.println(largestRect(new int[]{2,1,5,6,2,3}));}
 }

@@ -1,6 +1,6 @@
 # =============================================================
 # MIT License | @analyticswithharry2026
-# GitHub  : https://github.com/analyticswithharry2026
+# GitHub  : https://github.com/analyticswithharry
 # YouTube : Analytics with Harry
 # =============================================================
 # Lesson     : 249 -- Serialize And Deserialize Binary Tree
@@ -8,21 +8,8 @@
 # Difficulty : Hard
 # Study Plan : Day 125
 # =============================================================
-
-# -- Problem --------------------------------------------------
-# Title      : Serialize And Deserialize Binary Tree
-# Category   : Trees
-# Difficulty : Hard
 #
-# APPROACH:
-#   Study the problem, then implement below.
-#
-# COMPLEXITY: Time O(?) | Space O(?)
-# --------------------------------------------------------------
-
-solve <- function() {
-  # TODO: implement solution for "Serialize And Deserialize Binary Tree"
-}
-
-# -- Tests ----------------------------------------------------
-cat("Lesson 249: Serialize And Deserialize Binary Tree\n")
+# QUESTION:
+#   Pre-order serialize with null markers; queue-based deserialize.
+# =============================================================
+cat("ser/des: see Python solution\n")

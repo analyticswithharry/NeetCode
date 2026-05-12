@@ -1,6 +1,6 @@
 # =============================================================
 # MIT License | @analyticswithharry2026
-# GitHub  : https://github.com/analyticswithharry2026
+# GitHub  : https://github.com/analyticswithharry
 # YouTube : Analytics with Harry
 # =============================================================
 # Lesson     : 226 -- Combination Sum IV
@@ -8,21 +8,9 @@
 # Difficulty : Medium
 # Study Plan : Day 113
 # =============================================================
-
-# -- Problem --------------------------------------------------
-# Title      : Combination Sum IV
-# Category   : 1-D Dynamic Programming
-# Difficulty : Medium
 #
-# APPROACH:
-#   Study the problem, then implement below.
-#
-# COMPLEXITY: Time O(?) | Space O(?)
-# --------------------------------------------------------------
-
-solve <- function() {
-  # TODO: implement solution for "Combination Sum IV"
-}
-
-# -- Tests ----------------------------------------------------
-cat("Lesson 226: Combination Sum IV\n")
+# QUESTION:
+#   Count ordered combinations of nums summing to target.
+# =============================================================
+combSum4 <- function(nums,t){ dp<-c(1,rep(0,t)); for(v in 1:t) for(x in nums) if(v>=x) dp[v+1]<-dp[v+1]+dp[v-x+1]; dp[t+1] }
+cat(combSum4(c(1,2,3),4),"\n")

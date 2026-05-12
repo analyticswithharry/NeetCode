@@ -1,6 +1,6 @@
 # =============================================================
 # MIT License | @analyticswithharry2026
-# GitHub  : https://github.com/analyticswithharry2026
+# GitHub  : https://github.com/analyticswithharry
 # YouTube : Analytics with Harry
 # =============================================================
 # Lesson     : 238 -- Best Time to Buy And Sell Stock II
@@ -8,24 +8,11 @@
 # Difficulty : Medium
 # Study Plan : Day 119
 # =============================================================
-
-# -- Problem --------------------------------------------------
-# Title      : Best Time to Buy And Sell Stock II
-# Category   : Arrays and Hashing
-# Difficulty : Medium
 #
-# APPROACH:
-#   Study the problem, then implement below.
-#
-# COMPLEXITY: Time O(?) | Space O(?)
-# --------------------------------------------------------------
-
-class Solution:
-    def solve(self):
-        # TODO: implement solution for "Best Time to Buy And Sell Stock II"
-        pass
-
-
-if __name__ == "__main__":
-    sol = Solution()
-    print("Lesson 238: Best Time to Buy And Sell Stock II")
+# QUESTION:
+#   Multiple transactions allowed. Sum positive deltas.
+# =============================================================
+def maxProfit(p):
+    return sum(max(0,p[i]-p[i-1]) for i in range(1,len(p)))
+if __name__=="__main__":
+    print(maxProfit([7,1,5,3,6,4]))

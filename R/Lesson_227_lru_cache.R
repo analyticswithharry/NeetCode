@@ -1,6 +1,6 @@
 # =============================================================
 # MIT License | @analyticswithharry2026
-# GitHub  : https://github.com/analyticswithharry2026
+# GitHub  : https://github.com/analyticswithharry
 # YouTube : Analytics with Harry
 # =============================================================
 # Lesson     : 227 -- LRU Cache
@@ -8,21 +8,8 @@
 # Difficulty : Medium
 # Study Plan : Day 114
 # =============================================================
-
-# -- Problem --------------------------------------------------
-# Title      : LRU Cache
-# Category   : Linked List
-# Difficulty : Medium
 #
-# APPROACH:
-#   Study the problem, then implement below.
-#
-# COMPLEXITY: Time O(?) | Space O(?)
-# --------------------------------------------------------------
-
-solve <- function() {
-  # TODO: implement solution for "LRU Cache"
-}
-
-# -- Tests ----------------------------------------------------
-cat("Lesson 227: LRU Cache\n")
+# QUESTION:
+#   Design LRU cache with O(1) get and put.
+# =============================================================
+cat("LRU: use environment hashmap + linked list\n")

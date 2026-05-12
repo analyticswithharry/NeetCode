@@ -1,6 +1,6 @@
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
 // Lesson     : 237 -- Longest Consecutive Sequence
@@ -8,27 +8,12 @@
 // Difficulty : Medium
 // Study Plan : Day 119
 // =============================================================
-
-// -- Problem --------------------------------------------------
-// Title      : Longest Consecutive Sequence
-// Category   : Arrays and Hashing
-// Difficulty : Medium
 //
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
-
-public class Lesson237_LongestConsecutiveSequence {
-
-    // TODO: implement solution for "Longest Consecutive Sequence"
-    public void solve() {
-        // implement here
-    }
-
-    public static void main(String[] args) {
-        Lesson237_LongestConsecutiveSequence sol = new Lesson237_LongestConsecutiveSequence();
-        System.out.println("Lesson 237: Longest Consecutive Sequence");
-    }
+// QUESTION:
+//   Length of longest run of consecutive integers in unsorted array. O(n) hashset.
+// =============================================================
+import java.util.*;
+public class Lesson237_LongestConsecutiveSequence{
+  static int longestConsec(int[] n){Set<Integer> s=new HashSet<>();for(int x:n)s.add(x);int best=0;for(int x:s)if(!s.contains(x-1)){int y=x;while(s.contains(y+1))y++;best=Math.max(best,y-x+1);}return best;}
+  public static void main(String[]a){System.out.println(longestConsec(new int[]{100,4,200,1,3,2}));}
 }

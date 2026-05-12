@@ -1,6 +1,6 @@
 # =============================================================
 # MIT License | @analyticswithharry2026
-# GitHub  : https://github.com/analyticswithharry2026
+# GitHub  : https://github.com/analyticswithharry
 # YouTube : Analytics with Harry
 # =============================================================
 # Lesson     : 228 -- LFU Cache
@@ -8,21 +8,8 @@
 # Difficulty : Hard
 # Study Plan : Day 114
 # =============================================================
-
-# -- Problem --------------------------------------------------
-# Title      : LFU Cache
-# Category   : Linked List
-# Difficulty : Hard
 #
-# APPROACH:
-#   Study the problem, then implement below.
-#
-# COMPLEXITY: Time O(?) | Space O(?)
-# --------------------------------------------------------------
-
-solve <- function() {
-  # TODO: implement solution for "LFU Cache"
-}
-
-# -- Tests ----------------------------------------------------
-cat("Lesson 228: LFU Cache\n")
+# QUESTION:
+#   LFU eviction; tie-break by least recently used. Use freq buckets of OrderedDict.
+# =============================================================
+cat("LFU Cache: see Python solution\n")

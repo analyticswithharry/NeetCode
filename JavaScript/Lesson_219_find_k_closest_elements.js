@@ -1,6 +1,6 @@
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
 // Lesson     : 219 -- Find K Closest Elements
@@ -8,21 +8,9 @@
 // Difficulty : Medium
 // Study Plan : Day 110
 // =============================================================
-
-// -- Problem --------------------------------------------------
-// Title      : Find K Closest Elements
-// Category   : Sliding Window
-// Difficulty : Medium
 //
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
-
-function solve() {
-    // TODO: implement solution for "Find K Closest Elements"
-}
-
-// -- Tests ----------------------------------------------------
-console.log("Lesson 219: Find K Closest Elements");
+// QUESTION:
+//   Return k closest sorted ints to x (binary search the window).
+// =============================================================
+function findClosest(a,k,x){let l=0,r=a.length-k;while(l<r){const m=(l+r)>>1;if(x-a[m]>a[m+k]-x)l=m+1;else r=m;}return a.slice(l,l+k);}
+console.log(findClosest([1,2,3,4,5],4,3));

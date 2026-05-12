@@ -1,6 +1,6 @@
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
 // Lesson     : 216 -- Partition Labels
@@ -8,21 +8,9 @@
 // Difficulty : Medium
 // Study Plan : Day 108
 // =============================================================
-
-// -- Problem --------------------------------------------------
-// Title      : Partition Labels
-// Category   : Greedy
-// Difficulty : Medium
 //
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
-
-function solve() {
-    // TODO: implement solution for "Partition Labels"
-}
-
-// -- Tests ----------------------------------------------------
-console.log("Lesson 216: Partition Labels");
+// QUESTION:
+//   Partition string so each char appears in at most one part. Return sizes.
+// =============================================================
+function partitionLabels(s){const last={};for(let i=0;i<s.length;i++)last[s[i]]=i;const r=[];let st=0,e=0;for(let i=0;i<s.length;i++){e=Math.max(e,last[s[i]]);if(i===e){r.push(e-st+1);st=i+1;}}return r;}
+console.log(partitionLabels("ababcbacadefegdehijhklij"));

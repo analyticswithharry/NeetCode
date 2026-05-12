@@ -1,6 +1,6 @@
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
 // Lesson     : 236 -- Valid Sudoku
@@ -8,27 +8,12 @@
 // Difficulty : Medium
 // Study Plan : Day 118
 // =============================================================
-
-// -- Problem --------------------------------------------------
-// Title      : Valid Sudoku
-// Category   : Arrays and Hashing
-// Difficulty : Medium
 //
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
-
-public class Lesson236_ValidSudoku {
-
-    // TODO: implement solution for "Valid Sudoku"
-    public void solve() {
-        // implement here
-    }
-
-    public static void main(String[] args) {
-        Lesson236_ValidSudoku sol = new Lesson236_ValidSudoku();
-        System.out.println("Lesson 236: Valid Sudoku");
-    }
+// QUESTION:
+//   Validate 9x9 board: rows, cols, 3x3 boxes have unique 1-9 (ignore '.').
+// =============================================================
+import java.util.*;
+public class Lesson236_ValidSudoku{
+  static boolean isValid(char[][] b){Set<String> s=new HashSet<>();for(int i=0;i<9;i++)for(int j=0;j<9;j++){char c=b[i][j];if(c=='.')continue;String r="r"+i+c,co="c"+j+c,k="b"+(i/3)+(j/3)+c;if(!s.add(r)||!s.add(co)||!s.add(k))return false;}return true;}
+  public static void main(String[]a){char[][] bd={{'5','3','.','.','7','.','.','.','.'},{'6','.','.','1','9','5','.','.','.'},{'.','9','8','.','.','.','.','6','.'},{'8','.','.','.','6','.','.','.','3'},{'4','.','.','8','.','3','.','.','1'},{'7','.','.','.','2','.','.','.','6'},{'.','6','.','.','.','.','2','8','.'},{'.','.','.','4','1','9','.','.','5'},{'.','.','.','.','8','.','.','7','9'}};System.out.println(isValid(bd));}
 }

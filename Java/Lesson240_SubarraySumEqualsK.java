@@ -1,6 +1,6 @@
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
 // Lesson     : 240 -- Subarray Sum Equals K
@@ -8,27 +8,12 @@
 // Difficulty : Medium
 // Study Plan : Day 120
 // =============================================================
-
-// -- Problem --------------------------------------------------
-// Title      : Subarray Sum Equals K
-// Category   : Arrays and Hashing
-// Difficulty : Medium
 //
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
-
-public class Lesson240_SubarraySumEqualsK {
-
-    // TODO: implement solution for "Subarray Sum Equals K"
-    public void solve() {
-        // implement here
-    }
-
-    public static void main(String[] args) {
-        Lesson240_SubarraySumEqualsK sol = new Lesson240_SubarraySumEqualsK();
-        System.out.println("Lesson 240: Subarray Sum Equals K");
-    }
+// QUESTION:
+//   Count subarrays with sum k using prefix-sum frequency map.
+// =============================================================
+import java.util.*;
+public class Lesson240_SubarraySumEqualsK{
+  static int subarraySum(int[] n,int k){Map<Integer,Integer> m=new HashMap<>();m.put(0,1);int s=0,c=0;for(int x:n){s+=x;c+=m.getOrDefault(s-k,0);m.merge(s,1,Integer::sum);}return c;}
+  public static void main(String[]a){System.out.println(subarraySum(new int[]{1,1,1},2));}
 }

@@ -1,6 +1,6 @@
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
 // Lesson     : 237 -- Longest Consecutive Sequence
@@ -8,36 +8,24 @@
 // Difficulty : Medium
 // Study Plan : Day 119
 // =============================================================
-
+//
+// QUESTION:
+//   Length of longest run of consecutive integers in unsorted array. O(n) hashset.
+// =============================================================
 #include <vector>
 #include <string>
 #include <iostream>
 #include <stack>
 #include <queue>
+#include <unordered_map>
+#include <unordered_set>
+#include <map>
+#include <set>
 #include <algorithm>
+#include <climits>
+#include <numeric>
+#include <functional>
+#include <cmath>
 using namespace std;
-
-// -- Problem --------------------------------------------------
-// Title      : Longest Consecutive Sequence
-// Category   : Arrays and Hashing
-// Difficulty : Medium
-//
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
-
-class Solution {
-public:
-    // TODO: implement solution for "Longest Consecutive Sequence"
-    void solve() {
-        // implement here
-    }
-};
-
-int main() {
-    Solution sol;
-    cout << "Lesson 237: Longest Consecutive Sequence" << endl;
-    return 0;
-}
+int longestConsec(vector<int> n){unordered_set<int> s(n.begin(),n.end());int best=0;for(int x:s)if(!s.count(x-1)){int y=x;while(s.count(y+1))y++;best=max(best,y-x+1);}return best;}
+int main(){cout<<longestConsec({100,4,200,1,3,2})<<"\n";}

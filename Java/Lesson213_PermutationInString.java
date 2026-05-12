@@ -1,34 +1,18 @@
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
-// Lesson     : 213 -- Permutation In String
+// Lesson     : 213 -- Permutation in String
 // Category   : Sliding Window
 // Difficulty : Medium
 // Study Plan : Day 107
 // =============================================================
-
-// -- Problem --------------------------------------------------
-// Title      : Permutation In String
-// Category   : Sliding Window
-// Difficulty : Medium
 //
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
-
-public class Lesson213_PermutationInString {
-
-    // TODO: implement solution for "Permutation In String"
-    public void solve() {
-        // implement here
-    }
-
-    public static void main(String[] args) {
-        Lesson213_PermutationInString sol = new Lesson213_PermutationInString();
-        System.out.println("Lesson 213: Permutation In String");
-    }
+// QUESTION:
+//   Return true if s2 contains a permutation of s1.
+// =============================================================
+public class Lesson213_PermutationInString{
+  static boolean checkInclusion(String s1,String s2){if(s1.length()>s2.length())return false;int[] a=new int[26],b=new int[26];for(char c:s1.toCharArray())a[c-'a']++;for(int i=0;i<s2.length();i++){b[s2.charAt(i)-'a']++;if(i>=s1.length())b[s2.charAt(i-s1.length())-'a']--;if(java.util.Arrays.equals(a,b))return true;}return false;}
+  public static void main(String[]a){System.out.println(checkInclusion("ab","eidbaooo"));System.out.println(checkInclusion("ab","eidboaoo"));}
 }

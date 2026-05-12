@@ -1,6 +1,6 @@
 # =============================================================
 # MIT License | @analyticswithharry2026
-# GitHub  : https://github.com/analyticswithharry2026
+# GitHub  : https://github.com/analyticswithharry
 # YouTube : Analytics with Harry
 # =============================================================
 # Lesson     : 234 -- Reverse Nodes In K Group
@@ -8,21 +8,8 @@
 # Difficulty : Hard
 # Study Plan : Day 117
 # =============================================================
-
-# -- Problem --------------------------------------------------
-# Title      : Reverse Nodes In K Group
-# Category   : Linked List
-# Difficulty : Hard
 #
-# APPROACH:
-#   Study the problem, then implement below.
-#
-# COMPLEXITY: Time O(?) | Space O(?)
-# --------------------------------------------------------------
-
-solve <- function() {
-  # TODO: implement solution for "Reverse Nodes In K Group"
-}
-
-# -- Tests ----------------------------------------------------
-cat("Lesson 234: Reverse Nodes In K Group\n")
+# QUESTION:
+#   Reverse nodes in groups of k. Remaining tail stays.
+# =============================================================
+cat("reverseK: reverse groups of k\n")

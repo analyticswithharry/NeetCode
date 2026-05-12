@@ -1,6 +1,6 @@
 # =============================================================
 # MIT License | @analyticswithharry2026
-# GitHub  : https://github.com/analyticswithharry2026
+# GitHub  : https://github.com/analyticswithharry
 # YouTube : Analytics with Harry
 # =============================================================
 # Lesson     : 233 -- Merge K Sorted Lists
@@ -8,21 +8,8 @@
 # Difficulty : Hard
 # Study Plan : Day 117
 # =============================================================
-
-# -- Problem --------------------------------------------------
-# Title      : Merge K Sorted Lists
-# Category   : Linked List
-# Difficulty : Hard
 #
-# APPROACH:
-#   Study the problem, then implement below.
-#
-# COMPLEXITY: Time O(?) | Space O(?)
-# --------------------------------------------------------------
-
-solve <- function() {
-  # TODO: implement solution for "Merge K Sorted Lists"
-}
-
-# -- Tests ----------------------------------------------------
-cat("Lesson 233: Merge K Sorted Lists\n")
+# QUESTION:
+#   Merge K sorted linked lists into one. Use heap.
+# =============================================================
+cat("mergeK: flatten + sort O(N log N)\n")

@@ -1,6 +1,6 @@
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
 // Lesson     : 227 -- LRU Cache
@@ -8,27 +8,12 @@
 // Difficulty : Medium
 // Study Plan : Day 114
 // =============================================================
-
-// -- Problem --------------------------------------------------
-// Title      : LRU Cache
-// Category   : Linked List
-// Difficulty : Medium
 //
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
-
-public class Lesson227_LruCache {
-
-    // TODO: implement solution for "LRU Cache"
-    public void solve() {
-        // implement here
-    }
-
-    public static void main(String[] args) {
-        Lesson227_LruCache sol = new Lesson227_LruCache();
-        System.out.println("Lesson 227: LRU Cache");
-    }
+// QUESTION:
+//   Design LRU cache with O(1) get and put.
+// =============================================================
+import java.util.*;
+public class Lesson227_LruCache{
+  static class LRU extends LinkedHashMap<Integer,Integer>{int c;LRU(int c){super(16,0.75f,true);this.c=c;}protected boolean removeEldestEntry(Map.Entry<Integer,Integer> e){return size()>c;}int g(int k){return getOrDefault(k,-1);}}
+  public static void main(String[]a){LRU c=new LRU(2);c.put(1,1);c.put(2,2);System.out.println(c.g(1));c.put(3,3);System.out.println(c.g(2));}
 }

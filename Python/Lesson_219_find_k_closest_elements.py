@@ -1,6 +1,6 @@
 # =============================================================
 # MIT License | @analyticswithharry2026
-# GitHub  : https://github.com/analyticswithharry2026
+# GitHub  : https://github.com/analyticswithharry
 # YouTube : Analytics with Harry
 # =============================================================
 # Lesson     : 219 -- Find K Closest Elements
@@ -8,24 +8,16 @@
 # Difficulty : Medium
 # Study Plan : Day 110
 # =============================================================
-
-# -- Problem --------------------------------------------------
-# Title      : Find K Closest Elements
-# Category   : Sliding Window
-# Difficulty : Medium
 #
-# APPROACH:
-#   Study the problem, then implement below.
-#
-# COMPLEXITY: Time O(?) | Space O(?)
-# --------------------------------------------------------------
-
-class Solution:
-    def solve(self):
-        # TODO: implement solution for "Find K Closest Elements"
-        pass
-
-
-if __name__ == "__main__":
-    sol = Solution()
-    print("Lesson 219: Find K Closest Elements")
+# QUESTION:
+#   Return k closest sorted ints to x (binary search the window).
+# =============================================================
+def findClosest(arr,k,x):
+    l,r=0,len(arr)-k
+    while l<r:
+        m=(l+r)//2
+        if x-arr[m]>arr[m+k]-x: l=m+1
+        else: r=m
+    return arr[l:l+k]
+if __name__=="__main__":
+    print(findClosest([1,2,3,4,5],4,3))

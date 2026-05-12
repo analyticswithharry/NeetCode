@@ -1,6 +1,6 @@
 # =============================================================
 # MIT License | @analyticswithharry2026
-# GitHub  : https://github.com/analyticswithharry2026
+# GitHub  : https://github.com/analyticswithharry
 # YouTube : Analytics with Harry
 # =============================================================
 # Lesson     : 219 -- Find K Closest Elements
@@ -8,21 +8,9 @@
 # Difficulty : Medium
 # Study Plan : Day 110
 # =============================================================
-
-# -- Problem --------------------------------------------------
-# Title      : Find K Closest Elements
-# Category   : Sliding Window
-# Difficulty : Medium
 #
-# APPROACH:
-#   Study the problem, then implement below.
-#
-# COMPLEXITY: Time O(?) | Space O(?)
-# --------------------------------------------------------------
-
-solve <- function() {
-  # TODO: implement solution for "Find K Closest Elements"
-}
-
-# -- Tests ----------------------------------------------------
-cat("Lesson 219: Find K Closest Elements\n")
+# QUESTION:
+#   Return k closest sorted ints to x (binary search the window).
+# =============================================================
+findClosest <- function(a,k,x){ l<-1; r<-length(a)-k+1; while(l<r){ m<-(l+r)%/%2; if(x-a[m]>a[m+k]-x) l<-m+1 else r<-m }; a[l:(l+k-1)] }
+cat(findClosest(c(1,2,3,4,5),4,3),"\n")

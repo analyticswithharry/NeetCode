@@ -1,6 +1,6 @@
 # =============================================================
 # MIT License | @analyticswithharry2026
-# GitHub  : https://github.com/analyticswithharry2026
+# GitHub  : https://github.com/analyticswithharry
 # YouTube : Analytics with Harry
 # =============================================================
 # Lesson     : 241 -- First Missing Positive
@@ -8,21 +8,9 @@
 # Difficulty : Hard
 # Study Plan : Day 121
 # =============================================================
-
-# -- Problem --------------------------------------------------
-# Title      : First Missing Positive
-# Category   : Arrays and Hashing
-# Difficulty : Hard
 #
-# APPROACH:
-#   Study the problem, then implement below.
-#
-# COMPLEXITY: Time O(?) | Space O(?)
-# --------------------------------------------------------------
-
-solve <- function() {
-  # TODO: implement solution for "First Missing Positive"
-}
-
-# -- Tests ----------------------------------------------------
-cat("Lesson 241: First Missing Positive\n")
+# QUESTION:
+#   Smallest missing positive int. O(n) time, O(1) extra space (cyclic placement).
+# =============================================================
+firstMissing <- function(n){ N<-length(n); s<-setdiff(1:(N+1),n); min(s) }
+cat(firstMissing(c(3,4,-1,1)),"\n")

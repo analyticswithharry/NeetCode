@@ -1,6 +1,6 @@
 # =============================================================
 # MIT License | @analyticswithharry2026
-# GitHub  : https://github.com/analyticswithharry2026
+# GitHub  : https://github.com/analyticswithharry
 # YouTube : Analytics with Harry
 # =============================================================
 # Lesson     : 226 -- Combination Sum IV
@@ -8,24 +8,15 @@
 # Difficulty : Medium
 # Study Plan : Day 113
 # =============================================================
-
-# -- Problem --------------------------------------------------
-# Title      : Combination Sum IV
-# Category   : 1-D Dynamic Programming
-# Difficulty : Medium
 #
-# APPROACH:
-#   Study the problem, then implement below.
-#
-# COMPLEXITY: Time O(?) | Space O(?)
-# --------------------------------------------------------------
-
-class Solution:
-    def solve(self):
-        # TODO: implement solution for "Combination Sum IV"
-        pass
-
-
-if __name__ == "__main__":
-    sol = Solution()
-    print("Lesson 226: Combination Sum IV")
+# QUESTION:
+#   Count ordered combinations of nums summing to target.
+# =============================================================
+def combSum4(nums,t):
+    dp=[0]*(t+1); dp[0]=1
+    for v in range(1,t+1):
+        for x in nums:
+            if v-x>=0: dp[v]+=dp[v-x]
+    return dp[t]
+if __name__=="__main__":
+    print(combSum4([1,2,3],4))

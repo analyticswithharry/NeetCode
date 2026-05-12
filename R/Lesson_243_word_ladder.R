@@ -1,6 +1,6 @@
 # =============================================================
 # MIT License | @analyticswithharry2026
-# GitHub  : https://github.com/analyticswithharry2026
+# GitHub  : https://github.com/analyticswithharry
 # YouTube : Analytics with Harry
 # =============================================================
 # Lesson     : 243 -- Word Ladder
@@ -8,21 +8,8 @@
 # Difficulty : Hard
 # Study Plan : Day 122
 # =============================================================
-
-# -- Problem --------------------------------------------------
-# Title      : Word Ladder
-# Category   : Graphs
-# Difficulty : Hard
 #
-# APPROACH:
-#   Study the problem, then implement below.
-#
-# COMPLEXITY: Time O(?) | Space O(?)
-# --------------------------------------------------------------
-
-solve <- function() {
-  # TODO: implement solution for "Word Ladder"
-}
-
-# -- Tests ----------------------------------------------------
-cat("Lesson 243: Word Ladder\n")
+# QUESTION:
+#   Shortest transformation sequence length from begin to end. BFS with wildcard buckets.
+# =============================================================
+cat("ladderLength: BFS with wildcard buckets\n")

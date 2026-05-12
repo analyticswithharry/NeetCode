@@ -1,6 +1,6 @@
 # =============================================================
 # MIT License | @analyticswithharry2026
-# GitHub  : https://github.com/analyticswithharry2026
+# GitHub  : https://github.com/analyticswithharry
 # YouTube : Analytics with Harry
 # =============================================================
 # Lesson     : 236 -- Valid Sudoku
@@ -8,21 +8,8 @@
 # Difficulty : Medium
 # Study Plan : Day 118
 # =============================================================
-
-# -- Problem --------------------------------------------------
-# Title      : Valid Sudoku
-# Category   : Arrays and Hashing
-# Difficulty : Medium
 #
-# APPROACH:
-#   Study the problem, then implement below.
-#
-# COMPLEXITY: Time O(?) | Space O(?)
-# --------------------------------------------------------------
-
-solve <- function() {
-  # TODO: implement solution for "Valid Sudoku"
-}
-
-# -- Tests ----------------------------------------------------
-cat("Lesson 236: Valid Sudoku\n")
+# QUESTION:
+#   Validate 9x9 board: rows, cols, 3x3 boxes have unique 1-9 (ignore '.').
+# =============================================================
+cat("isValid: see Python solution\n")

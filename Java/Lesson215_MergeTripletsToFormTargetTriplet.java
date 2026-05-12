@@ -1,6 +1,6 @@
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
 // Lesson     : 215 -- Merge Triplets to Form Target Triplet
@@ -8,27 +8,11 @@
 // Difficulty : Medium
 // Study Plan : Day 108
 // =============================================================
-
-// -- Problem --------------------------------------------------
-// Title      : Merge Triplets to Form Target Triplet
-// Category   : Greedy
-// Difficulty : Medium
 //
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
-
-public class Lesson215_MergeTripletsToFormTargetTriplet {
-
-    // TODO: implement solution for "Merge Triplets to Form Target Triplet"
-    public void solve() {
-        // implement here
-    }
-
-    public static void main(String[] args) {
-        Lesson215_MergeTripletsToFormTargetTriplet sol = new Lesson215_MergeTripletsToFormTargetTriplet();
-        System.out.println("Lesson 215: Merge Triplets to Form Target Triplet");
-    }
+// QUESTION:
+//   Pick triplets where every value <= target; check if max across them equals target.
+// =============================================================
+public class Lesson215_MergeTripletsToFormTargetTriplet{
+  static boolean mergeTriplets(int[][] t,int[] T){int[] g={0,0,0};for(int[] x:t)if(x[0]<=T[0]&&x[1]<=T[1]&&x[2]<=T[2])for(int i=0;i<3;i++)g[i]=Math.max(g[i],x[i]);return g[0]==T[0]&&g[1]==T[1]&&g[2]==T[2];}
+  public static void main(String[]a){System.out.println(mergeTriplets(new int[][]{{2,5,3},{1,8,4},{1,7,5}},new int[]{2,7,5}));}
 }

@@ -1,6 +1,6 @@
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
 // Lesson     : 216 -- Partition Labels
@@ -8,36 +8,24 @@
 // Difficulty : Medium
 // Study Plan : Day 108
 // =============================================================
-
+//
+// QUESTION:
+//   Partition string so each char appears in at most one part. Return sizes.
+// =============================================================
 #include <vector>
 #include <string>
 #include <iostream>
 #include <stack>
 #include <queue>
+#include <unordered_map>
+#include <unordered_set>
+#include <map>
+#include <set>
 #include <algorithm>
+#include <climits>
+#include <numeric>
+#include <functional>
+#include <cmath>
 using namespace std;
-
-// -- Problem --------------------------------------------------
-// Title      : Partition Labels
-// Category   : Greedy
-// Difficulty : Medium
-//
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
-
-class Solution {
-public:
-    // TODO: implement solution for "Partition Labels"
-    void solve() {
-        // implement here
-    }
-};
-
-int main() {
-    Solution sol;
-    cout << "Lesson 216: Partition Labels" << endl;
-    return 0;
-}
+vector<int> partitionLabels(string s){int last[26]={0};for(int i=0;i<(int)s.size();i++)last[s[i]-'a']=i;vector<int> r;int st=0,e=0;for(int i=0;i<(int)s.size();i++){e=max(e,last[s[i]-'a']);if(i==e){r.push_back(e-st+1);st=i+1;}}return r;}
+int main(){auto r=partitionLabels("ababcbacadefegdehijhklij");for(int x:r)cout<<x<<" ";cout<<"\n";}

@@ -1,6 +1,6 @@
 // =============================================================
 // MIT License | @analyticswithharry2026
-// GitHub  : https://github.com/analyticswithharry2026
+// GitHub  : https://github.com/analyticswithharry
 // YouTube : Analytics with Harry
 // =============================================================
 // Lesson     : 216 -- Partition Labels
@@ -8,27 +8,12 @@
 // Difficulty : Medium
 // Study Plan : Day 108
 // =============================================================
-
-// -- Problem --------------------------------------------------
-// Title      : Partition Labels
-// Category   : Greedy
-// Difficulty : Medium
 //
-// APPROACH:
-//   Study the problem, then implement below.
-//
-// COMPLEXITY: Time O(?) | Space O(?)
-// --------------------------------------------------------------
-
-public class Lesson216_PartitionLabels {
-
-    // TODO: implement solution for "Partition Labels"
-    public void solve() {
-        // implement here
-    }
-
-    public static void main(String[] args) {
-        Lesson216_PartitionLabels sol = new Lesson216_PartitionLabels();
-        System.out.println("Lesson 216: Partition Labels");
-    }
+// QUESTION:
+//   Partition string so each char appears in at most one part. Return sizes.
+// =============================================================
+import java.util.*;
+public class Lesson216_PartitionLabels{
+  static List<Integer> partitionLabels(String s){int[] last=new int[26];for(int i=0;i<s.length();i++)last[s.charAt(i)-'a']=i;List<Integer> r=new ArrayList<>();int st=0,e=0;for(int i=0;i<s.length();i++){e=Math.max(e,last[s.charAt(i)-'a']);if(i==e){r.add(e-st+1);st=i+1;}}return r;}
+  public static void main(String[]a){System.out.println(partitionLabels("ababcbacadefegdehijhklij"));}
 }

@@ -1,6 +1,6 @@
 # =============================================================
 # MIT License | @analyticswithharry2026
-# GitHub  : https://github.com/analyticswithharry2026
+# GitHub  : https://github.com/analyticswithharry
 # YouTube : Analytics with Harry
 # =============================================================
 # Lesson     : 235 -- Product of Array Except Self
@@ -8,21 +8,9 @@
 # Difficulty : Medium
 # Study Plan : Day 118
 # =============================================================
-
-# -- Problem --------------------------------------------------
-# Title      : Product of Array Except Self
-# Category   : Arrays and Hashing
-# Difficulty : Medium
 #
-# APPROACH:
-#   Study the problem, then implement below.
-#
-# COMPLEXITY: Time O(?) | Space O(?)
-# --------------------------------------------------------------
-
-solve <- function() {
-  # TODO: implement solution for "Product of Array Except Self"
-}
-
-# -- Tests ----------------------------------------------------
-cat("Lesson 235: Product of Array Except Self\n")
+# QUESTION:
+#   Return array where output[i] = product of all nums except nums[i]. O(n) no division.
+# =============================================================
+productExceptSelf <- function(n){ o<-rep(1,length(n)); p<-1; for(i in seq_along(n)){ o[i]<-p; p<-p*n[i] }; p<-1; for(i in length(n):1){ o[i]<-o[i]*p; p<-p*n[i] }; o }
+cat(productExceptSelf(c(1,2,3,4)),"\n")
